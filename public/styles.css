@@ -1,0 +1,16 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  height: 100svh;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(238, 245, 255);
+}

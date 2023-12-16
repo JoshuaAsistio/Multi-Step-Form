@@ -1,0 +1,27 @@
+.main {
+  width: 65.28vw;
+  height: 75.31vh;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 20px;
+  box-shadow: 0 0 0 10px hsla(231, 11%, 63%, 0.1);
+  padding: 15px;
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+
+/* 
+  width: 92vw;
+  height: 56.22vh;
+ */
+
+@media screen and (max-width: 1024px) {
+  .main {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    grid-template-columns: 100%;
+    display: revert;
+    background-color: rgb(238, 245, 255);
+    box-shadow: none;
+  }
+}

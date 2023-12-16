@@ -1,0 +1,139 @@
+.form {
+  padding-inline: 6.94vw;
+  padding-top: 6.17vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form__section__title {
+  font-size: calc(15px + 1.04vw);
+  margin-bottom: 2.47vh;
+  color: rgb(0, 43, 93);
+}
+
+.form__section__description {
+  color: #575760;
+  font-size: calc(8px + 0.56vw);
+  margin-bottom: 5.56vh;
+}
+
+.form__section__label-error {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form__section__label {
+  color: rgb(0, 43, 93);
+  font-size: calc(8px + 0.56vw);
+  display: block;
+  margin-bottom: 1.23vh;
+}
+
+.form__section__error-msg {
+  text-align: right;
+  color: hsl(354, 84%, 57%);
+}
+
+.form__section__input {
+  padding: 1.23vh 0.69vw;
+  border-radius: 10px;
+  border: 1px solid rgb(151, 152, 154);
+  width: 100%;
+  font-size: calc(8px + 0.56vw);
+  color: #575760;
+  margin-bottom: 3.09vh;
+}
+
+.form__section__input:focus {
+  outline-color: hsl(243, 100%, 62%);
+}
+
+.form__section__input::placeholder {
+  color: inherit;
+}
+
+.footer {
+  display: flex;
+}
+
+.footer__next,
+.footer__back {
+  padding: 1.23vh 1.74vw;
+  font-size: calc(8px + 0.56vw);
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.footer__next {
+  background-color: rgb(3, 41, 90);
+  color: rgb(255, 255, 255);
+}
+
+.footer__next:focus,
+.footer__next:focus {
+  outline-color: hsl(243, 100%, 62%);
+  outline-width: 5px;
+}
+
+@media screen and (max-width: 1366px) {
+  .form {
+    padding-top: 4.12vh;
+  }
+
+  .form__section__description {
+    margin-bottom: 3.71vh;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .form {
+    padding-inline: 6.67vw;
+    padding-top: 35px;
+  }
+
+  .form__section {
+    background-color: white;
+    padding-inline: 6.67vw;
+    padding-top: 3.75vh;
+    border-radius: 10px;
+    transform: translateY(-19.27vh);
+  }
+
+  .form__section__title {
+    font-size: calc(15px + 4vw);
+  }
+
+  .form__section__description {
+    margin-bottom: 5.25vh;
+    font-size: calc(8px + 2.13vw);
+  }
+
+  .form__section__label {
+    margin-bottom: 0.75vh;
+    font-size: calc(8px + 2.13vw);
+  }
+
+  .form__section__input {
+    font-size: calc(8px + 2.13vw);
+    padding: 1.5vh 2.67vw;
+  }
+
+  .footer {
+    background-color: white;
+    padding: 3vh 5.33vw;
+  }
+
+  .footer__next,
+  .footer__back {
+    padding-inline: 4vw;
+    font-size: calc(8px + 2.13vw);
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .form__section {
+    padding-bottom: 3.75vh;
+  }
+}

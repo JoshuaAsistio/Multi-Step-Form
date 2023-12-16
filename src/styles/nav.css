@@ -1,0 +1,85 @@
+.main__navigation {
+  background-image: url("../assets/images/bg-sidebar-desktop.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  padding-top: 20px;
+}
+
+.main__navigation__button {
+  display: block;
+  background-color: transparent;
+  border: none;
+  color: hsl(0, 0%, 100%);
+  font-size: 16px;
+  padding-left: 1.39vw;
+  margin-bottom: 25px;
+  text-align: start;
+  display: flex;
+  cursor: pointer;
+  width: 100%;
+}
+
+.main__navigation__button:focus {
+  outline-color: white;
+  outline-width: 1px;
+}
+
+.main__navigation__button__stepCount {
+  margin-right: 1.04vw;
+  font-size: 22px;
+  padding: 10px 15px;
+  border-radius: 50%;
+  border: 1px solid hsl(0, 0%, 100%);
+  font-weight: 700;
+}
+
+.main__navigation__button__stepIndicator {
+  color: hsl(229, 24%, 87%);
+  margin-bottom: 5px;
+}
+
+.main__navigation__button__stepName {
+  font-weight: 700;
+}
+
+@media screen and (max-width: 1366px) {
+  .main__navigation__button {
+    font-size: calc(7.5px + 0.53vw);
+  }
+
+  .main__navigation__button__stepCount {
+    font-size: calc(10.5px + 0.77vw);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .main__navigation {
+    height: 30%;
+    background-image: url("../assets/images/bg-sidebar-mobile.svg");
+    background-position: center;
+    display: flex;
+    padding-top: 0;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .main__navigation__button {
+    padding-left: 0;
+    margin-bottom: 0;
+    transform: translateY(-4.5vh);
+    width: 50px;
+  }
+
+  .main__navigation__button__stepCount {
+    margin-right: 0;
+    font-size: calc(8px + 2.13vw);
+  }
+
+  .main__navigation__button__stepIndicator,
+  .main__navigation__button__stepName {
+    display: none;
+  }
+}
