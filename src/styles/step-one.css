@@ -6,6 +6,11 @@
   justify-content: space-between;
 }
 
+.sr-only {
+  position: absolute;
+  transform: translate(-1000vw);
+}
+
 .form__section__title {
   font-size: calc(15px + 1.04vw);
   margin-bottom: 2.47vh;
