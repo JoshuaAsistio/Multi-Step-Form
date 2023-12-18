@@ -1,15 +1,18 @@
 {
   "files": {
-    "main.css": "/Multi-Step-Form/static/css/main.22be967f.css",
-    "main.js": "/Multi-Step-Form/static/js/main.3498e131.js",
+    "main.css": "/Multi-Step-Form/static/css/main.0fb3df46.css",
+    "main.js": "/Multi-Step-Form/static/js/main.ef7bdf9c.js",
     "static/media/bg-sidebar-desktop.svg": "/Multi-Step-Form/static/media/bg-sidebar-desktop.6918153f38678372ceb1.svg",
     "static/media/bg-sidebar-mobile.svg": "/Multi-Step-Form/static/media/bg-sidebar-mobile.ad41661b40ca0b967f3a.svg",
+    "static/media/icon-advanced.svg": "/Multi-Step-Form/static/media/icon-advanced.705bd10c4c1f688871d729633f0ca4ae.svg",
     "index.html": "/Multi-Step-Form/index.html",
-    "main.22be967f.css.map": "/Multi-Step-Form/static/css/main.22be967f.css.map",
-    "main.3498e131.js.map": "/Multi-Step-Form/static/js/main.3498e131.js.map"
+    "static/media/icon-pro.svg": "/Multi-Step-Form/static/media/icon-pro.2e7e377da9c658d608624304a0f8dae6.svg",
+    "static/media/icon-arcade.svg": "/Multi-Step-Form/static/media/icon-arcade.a08c098289a31bb2f66d675be71565b3.svg",
+    "main.0fb3df46.css.map": "/Multi-Step-Form/static/css/main.0fb3df46.css.map",
+    "main.ef7bdf9c.js.map": "/Multi-Step-Form/static/js/main.ef7bdf9c.js.map"
   },
   "entrypoints": [
-    "static/css/main.22be967f.css",
-    "static/js/main.3498e131.js"
+    "static/css/main.0fb3df46.css",
+    "static/js/main.ef7bdf9c.js"
   ]
 }
