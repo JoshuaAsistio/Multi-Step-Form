@@ -45,9 +45,11 @@ const StepOne = ({ errors, inputs, setInputs }) => {
       {/* ------------------------------------------------------------------- */}
 
       {/* title and description */}
-      <h2 className="form__section__title">Personal Info</h2>
+      <h2 className="form__section__title" focusable={true}>
+        Personal Info
+      </h2>
 
-      <p className="form__section__description">
+      <p className="form__section__description" focusable={true}>
         Please provide your name, email address and phone number.
       </p>
       {/* ------------------------------------------------------- */}

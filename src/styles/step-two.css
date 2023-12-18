@@ -1,0 +1,179 @@
+@import url("./step-one.css");
+
+.form__section__plans {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  column-gap: 1.25vw;
+}
+
+.form__section__plans__plan {
+  height: 19.75vh;
+  width: 9.58vw;
+  padding: 1.85vh 1.39vh;
+  border-radius: 0.625rem;
+  border: 1px solid rgb(219, 219, 221);
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: calc(8px + 0.56vw);
+  text-align: start;
+  cursor: pointer;
+}
+
+.form__section__plans__plan:focus,
+.form__section__plans__plan:hover {
+  border-color: hsl(243, 100%, 62%);
+}
+
+.form__section__plans__plan__icon {
+  width: 40px;
+  height: 40px;
+}
+
+.form__section__plans__plan-name {
+  color: hsl(213, 96%, 18%);
+  font-weight: 700;
+}
+
+.form__section__plans__plan-price {
+  color: #6f768b;
+}
+
+.form__section__plans__freebie {
+  font-size: 14px;
+  color: hsl(213, 96%, 18%);
+  font-weight: 700;
+}
+
+.form__section__plans__plan-type {
+  display: flex;
+  justify-content: center;
+  margin-top: 5.56vh;
+  column-gap: 1.74vw;
+  background-color: rgb(248, 249, 254);
+  padding-block: 2.47vh;
+  border-radius: 10px;
+}
+
+.form__section__plans__toggler__plan-type__name {
+  font-size: calc(8px + 0.56vw);
+  font-weight: 700;
+}
+
+.form__section__plans__plan-type__button {
+  width: 40px;
+  background-color: hsl(213, 96%, 18%);
+  padding: 2px 3px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+}
+
+.form__section__plans__plan-type__button__circle {
+  height: 12px;
+  width: 12px;
+  background-color: white;
+  border-radius: 50%;
+  justify-self: center;
+  animation-name: goRight;
+  animation-duration: 0.1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes goRight {
+  0% {
+    margin-left: 0;
+  }
+  20% {
+    margin-left: 10%;
+  }
+  40% {
+    margin-left: 30%;
+  }
+  60% {
+    margin-left: 50%;
+  }
+  80% {
+    margin-left: 65%;
+  }
+  100% {
+    margin-left: auto;
+  }
+}
+
+@keyframes goLeft {
+  0% {
+    margin-left: auto;
+  }
+  20% {
+    margin-left: 65%;
+  }
+  40% {
+    margin-left: 50%;
+  }
+  60% {
+    margin-left: 30%;
+  }
+  80% {
+    margin-left: 10%;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .form__section__plans__plan {
+    width: 138px;
+    height: 160px;
+    padding: 15px 20px;
+    font-size: 16px;
+  }
+
+  .form__section__plans__toggler__plan-type__name {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .form__section__plans {
+    grid-template-columns: 1fr;
+    row-gap: 12px;
+  }
+
+  .form__section__plans__plan {
+    height: 77px;
+    width: 100%;
+    flex-direction: row;
+    justify-content: initial;
+    align-items: center;
+    column-gap: 15px;
+    font-size: 16px;
+  }
+
+  .form__section__plans__plan__icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .form__section__plans__plan-type {
+    margin-top: 22.5px;
+    gap: 25px;
+  }
+
+  .form__section__plans__toggler__plan-type__name {
+    font-size: 16px;
+  }
+
+  .form__section__plans__plan-type__button {
+    width: 40px;
+    padding: 2px 3px;
+  }
+
+  .form__section__plans__plan-type__button__circle {
+    height: 12px;
+    width: 12px;
+  }
+}

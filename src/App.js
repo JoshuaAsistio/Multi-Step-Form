@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import "./styles/main.css";
+import "./styles/step-two.css";
 
 import Navigation from "./components/Navigation";
 import StepOne from "./components/StepOne";
+import StepTwo from "./components/StepTwo";
+import Footer from "./components/Footer";
 
 const App = () => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -10,6 +13,9 @@ const App = () => {
     name: "",
     email: "",
     phoneNumber: "",
+    planType: "Monthly",
+    plan: "Arcade",
+    price: 9,
   });
   const [errors, setErrors] = useState({
     nameError: false,
@@ -66,27 +72,19 @@ const App = () => {
           <StepOne errors={errors} inputs={inputs} setInputs={setInputs} />
         )}
 
-        {currentStep === 2 && <section>Step Two</section>}
+        {currentStep === 2 && (
+          <StepTwo
+            planType={inputs.planType}
+            plan={inputs.plan}
+            setInputs={setInputs}
+          />
+        )}
 
         {currentStep === 3 && <section>Step Three</section>}
 
         {currentStep === 4 && <section>Step Four</section>}
 
-        <footer
-          className="footer"
-          style={{
-            justifyContent: currentStep !== 1 ? "space-between" : "right",
-          }}
-        >
-          {currentStep !== 1 && (
-            <button className="footer__back" onClick={(e) => handleClick(e)}>
-              Back
-            </button>
-          )}
-          <button className="footer__next" onClick={(e) => handleClick(e)}>
-            {currentStep !== 4 ? "Next" : "Confirm"}
-          </button>
-        </footer>
+        <Footer currentStep={currentStep} handleClick={handleClick} />
       </form>
     </main>
   );
