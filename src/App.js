@@ -5,6 +5,7 @@ import "./styles/step-two.css";
 import Navigation from "./components/Navigation";
 import StepOne from "./components/StepOne";
 import StepTwo from "./components/StepTwo";
+import StepThree from "./components/StepThree";
 import Footer from "./components/Footer";
 
 const App = () => {
@@ -15,7 +16,8 @@ const App = () => {
     phoneNumber: "",
     planType: "Monthly",
     plan: "Arcade",
-    price: 9,
+    planPrice: 9,
+    addOns: [],
   });
   const [errors, setErrors] = useState({
     nameError: false,
@@ -80,7 +82,13 @@ const App = () => {
           />
         )}
 
-        {currentStep === 3 && <section>Step Three</section>}
+        {currentStep === 3 && (
+          <StepThree
+            planType={inputs.planType}
+            setInputs={setInputs}
+            inputs={inputs}
+          />
+        )}
 
         {currentStep === 4 && <section>Step Four</section>}
 

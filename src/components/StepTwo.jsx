@@ -38,12 +38,12 @@ const StepTwo = ({ planType, plan, setInputs }) => {
         if (planType === "Monthly") {
           setInputs((prevInputs) => ({
             ...prevInputs,
-            price: item.monthlyPrice,
+            planPrice: item.monthlyPrice,
           }));
         } else {
           setInputs((prevInputs) => ({
             ...prevInputs,
-            price: item.yearlyPrice,
+            planPrice: item.yearlyPrice,
           }));
         }
       }
@@ -60,7 +60,7 @@ const StepTwo = ({ planType, plan, setInputs }) => {
         if (plan === item.name) {
           setInputs((prevInputs) => ({
             ...prevInputs,
-            price: item.yearlyPrice,
+            planPrice: item.yearlyPrice,
           }));
         }
       });
@@ -71,7 +71,7 @@ const StepTwo = ({ planType, plan, setInputs }) => {
         if (plan === item.name) {
           setInputs((prevInputs) => ({
             ...prevInputs,
-            price: item.monthlyPrice,
+            planPrice: item.monthlyPrice,
           }));
         }
       });
