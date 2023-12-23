@@ -21,6 +21,10 @@
   cursor: pointer;
 }
 
+input[type="checkbox"] {
+  accent-color: hsl(243, 100%, 62%);
+}
+
 .form__section__add-ons__add-on-name {
   color: hsl(213, 96%, 18%);
   font-weight: 700;

@@ -1,0 +1,86 @@
+@import url("./step-one.css");
+
+.form__section__summary {
+  font-size: 16px;
+}
+
+@media (max-width: 1024px) {
+  .form__section__summary {
+    font-size: calc(8px + 2.13vw);
+  }
+}
+
+.form__section__summary-plan {
+  background-color: #f8f9fe;
+  padding: 1rem;
+  border-radius: 0.625rem;
+}
+
+.form__section__summary__plan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.form__section__summary__plan__name {
+  margin-bottom: 5px;
+  color: hsl(213, 96%, 18%);
+  font-weight: 700;
+}
+
+.form__section__summary__plan__button {
+  background-color: transparent;
+  border: none;
+  text-decoration: underline;
+  color: #adadb9;
+  cursor: pointer;
+}
+
+.form__section__summary__plan__button:hover {
+  color: hsl(243, 100%, 62%);
+}
+
+@media (max-width: 1024px) {
+  .form__section__summary__plan__button {
+    font-size: calc(2px + 2.13vw);
+  }
+}
+
+.form__section__summary__plan__price {
+  font-weight: 700;
+  color: hsl(213, 96%, 18%);
+}
+
+.form__section__horizontal-line {
+  height: 1px;
+  width: 100%;
+  background-color: #e7e8ed;
+  margin-bottom: 1rem;
+}
+
+.form__section__summary__add-ons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.form__section__summary__add-ons__name,
+.form__section__summary__total__total {
+  color: #adadb9;
+}
+
+.form__section__summary__add-ons__price {
+  color: hsl(213, 96%, 18%);
+}
+
+.form__section__summary__total {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.form__section__summary__total__price {
+  font-weight: 700;
+  color: hsl(243, 100%, 62%);
+}

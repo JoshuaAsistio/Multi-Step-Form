@@ -1,7 +1,6 @@
 import React from "react";
 import "../styles/step-three.css";
 
-// refactor the updateAddOnPrice function
 const StepThree = ({ planType, setInputs, inputs }) => {
   const addOns = [
     {
@@ -44,11 +43,18 @@ const StepThree = ({ planType, setInputs, inputs }) => {
     });
   };
 
+  const isChecked = (addOns, addOn) => {
+    if (addOns.length !== 0) {
+      for (let i = 0; i < addOns.length; i++) {
+        if (addOns[i].name === addOn.name) {
+          return true;
+        }
+      }
+    }
+  };
+
   return (
     <section className="form__section">
-      {inputs.addOns.toString() !== "" && (
-        <p>{inputs.addOns.map((item) => item.name)}</p>
-      )}
       <h2 className="form__section__title">Pick add-ons</h2>
 
       <p className="form__section__description">
@@ -73,6 +79,7 @@ const StepThree = ({ planType, setInputs, inputs }) => {
               onChange={(e) => updateAddOnsPrice(e)}
               autoFocus={item.name === "Online Service" ? true : false}
               aria-label={`Click here to add ${item.name} which gives you access to ${item.description} for ${item.monthlyPrice} dollars per month or ${item.yearlyPrice} dollars per year`}
+              checked={isChecked(inputs.addOns, item) || false}
             />
             <div>
               <p className="form__section__add-ons__add-on-name">{item.name}</p>

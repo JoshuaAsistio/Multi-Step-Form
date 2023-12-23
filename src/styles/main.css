@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Ubuntu Regular";
+  src: url("../assets/fonts/Ubuntu-Regular.ttf");
+}
+
 .main {
   width: 65.28vw;
   height: 75.31vh;
@@ -7,6 +12,7 @@
   padding: 15px;
   display: grid;
   grid-template-columns: 30% 70%;
+  font-family: "Ubuntu Regular", "Courier New", Courier, monospace;
 }
 
 /* 

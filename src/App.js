@@ -6,13 +6,15 @@ import Navigation from "./components/Navigation";
 import StepOne from "./components/StepOne";
 import StepTwo from "./components/StepTwo";
 import StepThree from "./components/StepThree";
+import StepFour from "./components/StepFour";
+import ThankYou from "./components/ThankYou";
 import Footer from "./components/Footer";
 
 const App = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [inputs, setInputs] = useState({
-    name: "",
     email: "",
+    name: "",
     phoneNumber: "",
     planType: "Monthly",
     plan: "Arcade",
@@ -28,7 +30,7 @@ const App = () => {
   const handleClick = (e) => {
     e.preventDefault();
 
-    if (e.target.innerText === "Next") {
+    if (e.target.innerText === "Next" || e.target.innerText === "Confirm") {
       if (
         inputs.name.length !== 0 &&
         inputs.email.length !== 0 &&
@@ -59,6 +61,8 @@ const App = () => {
             ...prevErrors,
             phoneNumberError: false,
           }));
+
+        setCurrentStep(1);
       }
     } else {
       setCurrentStep((prevStep) => (prevStep -= 1));
@@ -90,9 +94,21 @@ const App = () => {
           />
         )}
 
-        {currentStep === 4 && <section>Step Four</section>}
+        {currentStep === 4 && (
+          <StepFour
+            planType={inputs.planType}
+            addOns={inputs.addOns}
+            planPrice={inputs.planPrice}
+            plan={inputs.plan}
+            setCurrentStep={setCurrentStep}
+          />
+        )}
 
-        <Footer currentStep={currentStep} handleClick={handleClick} />
+        {currentStep > 4 && <ThankYou />}
+
+        {!(currentStep > 4) && (
+          <Footer currentStep={currentStep} handleClick={handleClick} />
+        )}
       </form>
     </main>
   );

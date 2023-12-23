@@ -1,0 +1,31 @@
+.thank-you {
+  height: 100%;
+  display: grid;
+  align-content: center;
+  place-items: center;
+  gap: 2rem;
+  text-align: center;
+}
+
+.thank-you__title {
+  color: hsl(213, 96%, 18%);
+}
+
+.thank-you__message {
+  color: hsl(231, 11%, 63%);
+}
+
+@media screen and (max-width: 1024px) {
+  .thank-you {
+    padding: 25px;
+    background-color: white;
+  }
+
+  .thank-you__title {
+    font-size: 30px;
+  }
+
+  .thank-you__description {
+    font-size: calc(8px + 2.13vw);
+  }
+}
